@@ -1,4 +1,7 @@
 module.exports = function reverse (n) {
+	if (n < 0) {
+		n = n * (-1);
+	}
     let arrayOfDigits = Array.from(String(n), Number);
     let reversedArray = [];
     let reversedArrayIndex = 0;
@@ -7,5 +10,5 @@ module.exports = function reverse (n) {
             reversedArrayIndex++;
         }
    let stringOfDigits = reversedArray.join('');
-    return Number(stringOfDigits);
+	return Number(stringOfDigits);
 }
